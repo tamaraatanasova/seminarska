@@ -1,0 +1,44 @@
+{
+    "name": "laravel/backend-api",
+    "description": "Backend API for RFID Access Control System",
+    "type": "project",
+    "require": {
+        "php": "^8.1",
+        "fideloper/proxy": "^4.4",
+        "fruitcake/laravel-cors": "^2.0",
+        "guzzlehttp/guzzle": "^7.3",
+        "laravel/framework": "^9.0",
+        "laravel/sanctum": "^2.11",
+        "laravel/tinker": "^2.7"
+    },
+    "require-dev": {
+        "facade/ignition": "^2.15",
+        "fakerphp/faker": "^1.20",
+        "laravel/sail": "^1.13",
+        "mockery/mockery": "^1.5.0",
+        "nunomaduro/collision": "^6.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
